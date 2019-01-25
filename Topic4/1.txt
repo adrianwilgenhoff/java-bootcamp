@@ -1,0 +1,62 @@
+CREATE DATABASE IF NOT EXISTS high_school;
+
+USE high_school;
+
+CREATE TABLE IF NOT EXISTS student (
+
+			id_student int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+			firstname VARCHAR(20) NOT NULL,
+			lastname VARCHAR(20) NOT NULL,
+			day_of_birth DATE NOT NULL
+
+);
+
+
+CREATE TABLE IF NOT EXISTS teacher(
+
+			id_teacher int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+			firstaname VARCHAR(20) NOT NULL,
+			lastname VARCHAR(20) NOT NULL,
+			day_of_birth DATE NOT NULL
+
+);
+
+
+CREATE TABLE IF NOT EXISTS course(
+			
+			id_course int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+			name VARCHAR(20) not null,
+			id_teacher_assigned int(11) NOT NULL,
+			hours_by_week int(11) NOT NULL,
+
+	CONSTRAINT fk_course_teacher FOREIGN KEY(id_teacher_assigned) REFERENCES teacher(id_teacher)
+);
+
+
+CREATE TABLE IF NOT EXISTS notes(
+
+			
+			id_student  int(11) NOT NULL,
+			id_course   int(11) NOT NULL,
+			note_1 FLOAT,
+			note_2 FLOAT,
+			note_3 FLOAT,			
+			note_final FLOAT,
+
+		CONSTRAINT fk_notes_student FOREIGN KEY(id_student) REFERENCES student(id_student),
+		CONSTRAINT fk_notes_course FOREIGN KEY(id_course) REFERENCES course(id_course),
+		PRIMARY KEY (id_student, id_course)
+);
+
+
+
+CREATE TABLE IF NOT EXISTS schedule(
+	
+					id_course int(11) NOT NULL,
+					days_on_week VARCHAR(255) NOT NULL,	
+					schedule_Initial_time TIME NOT NULL,
+    					schedule_final_time TIME NOT NULL,
+	   
+   		 PRIMARY KEY(id_course,days_on_week),
+   		 CONSTRAINT fk_schedule_course FOREIGN KEY(id_course) REFERENCES course(id_course)
+);

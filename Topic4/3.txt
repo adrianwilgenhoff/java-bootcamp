@@ -1,0 +1,11 @@
+List students and teachers for a given course:
+
+
+SELECT c.name AS Course,CONCAT(t.lastname,' ',t.firstname) AS Teacher,CONCAT (s.lastname,' ',s.firstname) AS Student FROM course c 
+			INNER JOIN teacher t ON c.id_teacher_assigned = t.id_teacher
+			INNER JOIN notes n ON c.id_course = n.id_course
+			INNER JOIN student s ON s.ID_STUDENT = n.id_student
+
+WHERE c.name = 'Poo Java'
+
+ORDER BY s.lastname ;

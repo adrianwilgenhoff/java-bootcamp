@@ -1,0 +1,8 @@
+
+SELECT CONCAT(t.firstname,' ', t.lastname) AS Teacher, c.name AS Course, s.days_on_week, s.schedule_Initial_time, s.schedule_final_time FROM course c
+			
+			INNER JOIN teacher t ON c.id_teacher_assigned = t.id_teacher
+			INNER JOIN schedule s ON c.id_course = s.id_course
+
+WHERE t.lastname = 'ISLAS'
+ORDER BY FIELD (s.days_on_week,'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday')

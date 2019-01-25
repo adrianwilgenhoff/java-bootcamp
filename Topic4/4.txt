@@ -1,0 +1,8 @@
+Percentage of students that passed/failed a given cours
+
+SELECT (SELECT COUNT(*)	FROM notes n WHERE n.id_course = 1 AND n.note_final >= 4)
+		/ COUNT(*) * 100 AS 'Passed %' FROM notes n WHERE n.id_course = 1;
+
+
+SELECT (SELECT COUNT(*)	FROM notes n WHERE n.id_course = 1 AND n.note_final < 4)
+		/ COUNT(*) * 100 AS 'Failed %' FROM notes n WHERE n.id_course = 1;
