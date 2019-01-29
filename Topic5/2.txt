@@ -1,0 +1,7 @@
+
+use high-school
+
+db.notes.find({Course_id: ObjectId("01")}, {Students: [{ Final_Note: {$gte: 4} }]}).pretty()
+
+
+--------------------------------------------------------------------------------------

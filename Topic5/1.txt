@@ -1,0 +1,82 @@
+
+>use high_school
+
+
+*/Students:
+
+>db.students.insert({Student_id: ObjectId("01"), First_Name: "adrian", Last_Name: "wilgenhoff", Date_of_Birth: 1990-08-25}
+		    {Student_id: ObjectId("02"), First_Name: "matias", Last_Name: "musante", Date_of_Birth: 1990-06-13}
+		    {Student_id: ObjectId("03"), First_Name: "esteban", Last_Name: "quito", Date_of_Birth: 1990-05-02}
+		    {Student_id: ObjectId("04"), First_Name: "alan", Last_Name: "perez", Date_of_Birth: 1990-07-26}
+		    {Student_id: ObjectId("05"), First_Name: "fernando", Last_Name: "rest", Date_of_Birth: 1991-02-11}
+		    {Student_id: ObjectId("06"), First_Name: "kevin", Last_Name: "sama", Date_of_Birth: 1990-10-18}
+		    {Student_id: ObjectId("07"), First_Name: "francisco", Last_Name: "wanhee", Date_of_Birth: 1990-09-07}
+		    {Student_id: ObjectId("08"), First_Name: "emanuel", Last_Name: "gomez", Date_of_Birth: 1990-07-22}
+		    {Student_id: ObjectId("09"), First_Name: "florencia", Last_Name: "erva", Date_of_Birth: 1991-01-18}
+		    {Student_id: ObjectId("10"), First_Name: "rosario", Last_Name: "villegas", Date_of_Birth: 1990-06-14})
+
+
+
+*/Profesor:
+
+>db.teachers.insert({Teachers_id: ObjectId("01"), First_Name: "Carlos", Last_Name: "Lopez", Date_of_Birth: 1980-09-09}
+		    {Teachers_id: ObjectId("02"), First_Name: "Sebastian", Last_Name: "Garofalo", Date_of_Birth: 1975-06-06}
+		    {Teachers_id: ObjectId("03"), First_Name: "Guillermo", Last_Name: "Islas", Date_of_Birth: 1965-04-04})
+
+
+
+
+*/Course:
+
+>db.course.insert({Course_id: ObjectId("01"), Name: "POO JAVA", Assigned_Teacher: Teachers_id: ObjectId("01"), Hours_by_Week: 06:00:00,
+		   Schedule_Time: 01:00:00, Schedule: [{Day: "Monday", Beginning: 08:00:00, End: 10:00:00}
+						       {Day: "Wednesday", Beginning: 09:00:00, End: 11:00:00}
+						       {Day: "Friday", Beginning: 10:00:00, End: 12:00:00}] }
+
+		  {Course_id: ObjectId("02"), Name: "BBDD", Assigned_Teacher: Teachers_id: ObjectId("03"), Hours_by_Week: 03:00:00,
+		   Schedule_Time: 01:00:00, Schedule: [{Day: "Tuesday", Beginning: 10:00:00, End: 11:00:00}
+						       {Day: "Thursday", Beginning: 08:30:00, End: 09:30:00}] }
+
+		  {Course_id: ObjectId("03"), Name: "FRAMEWORKS JAVA", Assigned_Teacher: Teachers_id: ObjectId("03"), Hours_by_Week: 02:00:00,
+		   Schedule_Time: 01:30:00, Schedule: [{Day: "Wednesday", Beginning: 09:00:00, End: 10:30:00}
+						       {Day: "Friday", Beginning: 11:00:00, End: 12:30:00}] })
+*/ Note:
+
+>db.notes.insert({Course_id: ObjectId("01"), Students: [
+		      { Student_id: ObjectId("01"), Note_01: 8.75, Note_02: 7.5, Note_03: 8, Final_Note: 7}
+		      { Student_id: ObjectId("02"), Note_01: 6.5, Note_02: 4, Note_03: 2, Final_Note: 2}
+		      { Student_id: ObjectId("03"), Note_01: 8, Note_02: 9, Note_03: 8.5, Final_Note: 8}
+		      { Student_id: ObjectId("04"), Note_01: 2, Note_02: 2, Note_03: 2, Final_Note: 2}
+		      { Student_id: ObjectId("05"), Note_01: 6.5, Note_02: 7, Note_03: 6.5, Final_Note: 8}
+		      { Student_id: ObjectId("06"), Note_01: 4, Note_02: 6, Note_03: 6, Final_Note: 4}
+		      { Student_id: ObjectId("07"), Note_01: 8, Note_02: 8, Note_03: 7.5, Final_Note: 8}
+		      { Student_id: ObjectId("08"), Note_01: 7.75, Note_02: 6, Note_03: 8, Final_Note: 7}
+		      { Student_id: ObjectId("09"), Note_01: 6, Note_02: 6, Note_03: 4, Final_Note: 2}
+		      { Student_id: ObjectId("10"), Note_01: 7, Note_02: 7, Note_03: 4, Final_Note: 6}
+
+
+		     {Course_id: ObjectId("02"), Students: [
+		      { Student_id: ObjectId("01"), Note_01: 9, Note_02: 10, Note_03: 9, Final_Note: 8}
+		      { Student_id: ObjectId("02"), Note_01: 7, Note_02: 7, Note_03: 6, Final_Note: 6}
+		      { Student_id: ObjectId("03"), Note_01: 4, Note_02: 7, Note_03: 8, Final_Note: 7}
+		      { Student_id: ObjectId("04"), Note_01: 8, Note_02: 9, Note_03: 9, Final_Note: 9}
+		      { Student_id: ObjectId("05"), Note_01: 10, Note_02: 10, Note_03: 10, Final_Note: 10}
+		      { Student_id: ObjectId("06"), Note_01: 6, Note_02: 5, Note_03: 5, Final_Note: 4}
+		      { Student_id: ObjectId("07"), Note_01: 4, Note_02: 6, Note_03: 7, Final_Note: 6}
+		      { Student_id: ObjectId("08"), Note_01: 8, Note_02: 8, Note_03: 8, Final_Note: 8}
+		      { Student_id: ObjectId("09"), Note_01: 7, Note_02: 7, Note_03: 6, Final_Note: 6}
+		      { Student_id: ObjectId("10"), Note_01: 6, Note_02: 6, Note_03: 4, Final_Note: 2}] }
+
+		     {Course_id: ObjectId("03"), Students: [
+		      { Student_id: ObjectId("01"), Note_01: 4, Note_02: 6, Note_03: 6, Final_Note: 4}
+		      { Student_id: ObjectId("02"), Note_01: 7, Note_02: 7, Note_03: 6, Final_Note: 8}
+		      { Student_id: ObjectId("03"), Note_01: 8, Note_02: 6, Note_03: 6, Final_Note: 4}
+		      { Student_id: ObjectId("04"), Note_01: 9, Note_02: 9, Note_03: 8, Final_Note: 9}
+		      { Student_id: ObjectId("05"), Note_01: 6, Note_02: 4, Note_03: 2, Final_Note: 2}
+		      { Student_id: ObjectId("06"), Note_01: 4, Note_02: 5, Note_03: 4, Final_Note: 6}
+		      { Student_id: ObjectId("07"), Note_01: 7, Note_02: 7, Note_03: 8, Final_Note: 7}
+		      { Student_id: ObjectId("08"), Note_01: 8, Note_02: 7, Note_03: 7, Final_Note: 9}
+		      { Student_id: ObjectId("09"), Note_01: 4, Note_02: 6, Note_03: 4, Final_Note: 8}
+		      { Student_id: ObjectId("10"), Note_01: 7, Note_02: 7, Note_03: 8, Final_Note: 6}] })
+
+
