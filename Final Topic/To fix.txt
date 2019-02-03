@@ -5,3 +5,4 @@
 5-add properties of swagger in the classes
 6-add spring security
 7-add javadoc
+8-rename paths
