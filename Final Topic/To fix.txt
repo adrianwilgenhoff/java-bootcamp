@@ -1,0 +1,6 @@
+1-id autoincrement entity products
+2-user/cart relation @one to one
+3-output visualization list products for a cart beautify
+4-buy cart: delete all products in a cart/show total 
+5-add properties of swagger in the classes
+6-add spring security
