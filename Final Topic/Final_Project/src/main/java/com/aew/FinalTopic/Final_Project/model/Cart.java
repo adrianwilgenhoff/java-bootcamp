@@ -1,4 +1,4 @@
-package com.aew.FinalTopic.Final_Proyect.model;
+package com.aew.FinalTopic.Final_Project.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
@@ -26,7 +26,7 @@ import javax.validation.constraints.NotNull;
 @Table(name = "cart")
 public class Cart implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 926575413166436534L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -40,6 +40,9 @@ public class Cart implements Serializable {
     @JsonIgnore
     private Collection<ProductCart> productCartCollection;
 
+    //@OneToOne
+    //private User username;
+    
     @JoinColumn(name = "username", referencedColumnName = "username")
     @ManyToOne(optional = false)
     private User username;

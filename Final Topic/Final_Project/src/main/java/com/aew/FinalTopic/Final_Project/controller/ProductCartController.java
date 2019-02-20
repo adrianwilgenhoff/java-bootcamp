@@ -1,11 +1,11 @@
-package com.aew.FinalTopic.Final_Proyect.controller;
+package com.aew.FinalTopic.Final_Project.controller;
 
-import com.aew.FinalTopic.Final_Proyect.model.Cart;
-import com.aew.FinalTopic.Final_Proyect.model.ProductCart;
-import com.aew.FinalTopic.Final_Proyect.model.ProductCartPK;
-import com.aew.FinalTopic.Final_Proyect.services.CartService;
-import com.aew.FinalTopic.Final_Proyect.services.ProductCartService;
-import com.aew.FinalTopic.Final_Proyect.services.ProductService;
+import com.aew.FinalTopic.Final_Project.model.Cart;
+import com.aew.FinalTopic.Final_Project.model.ProductCart;
+import com.aew.FinalTopic.Final_Project.model.ProductCartPK;
+import com.aew.FinalTopic.Final_Project.services.CartService;
+import com.aew.FinalTopic.Final_Project.services.ProductCartService;
+import com.aew.FinalTopic.Final_Project.services.ProductService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -93,7 +93,7 @@ public class ProductCartController {
 
     //list products for a cart
     @RequestMapping(value = "/cart/product/list/idCart={idCart}", method = RequestMethod.GET)
-    public ResponseEntity<List<ProductCart>> listAllProducts(@PathVariable("idCart") Integer idCart) {
+    public ResponseEntity<String> listAllProducts(@PathVariable("idCart") Integer idCart) {
 
         List<ProductCart> listProductCart = cartService.findByIdCart(idCart).getProducts();
         Cart cart = new Cart(idCart);
@@ -101,7 +101,7 @@ public class ProductCartController {
         if (listProductCart.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
-        return new ResponseEntity<>(listProductCart, HttpStatus.OK);
+        return new ResponseEntity<>(listProductCart.toString(), HttpStatus.OK);
     }
 
     //quantity product for a cart

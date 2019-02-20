@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.aew.FinalTopic.Final_Proyect.configuration;
+package com.aew.FinalTopic.Final_Project.configuration;
 
 import springfox.documentation.service.Contact;
 import org.springframework.context.annotation.Bean;

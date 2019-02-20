@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.aew.FinalTopic.Final_Proyect.model;
+package com.aew.FinalTopic.Final_Project.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
@@ -19,7 +19,7 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class ProductCartPK implements Serializable{
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 2445678945687L;
     
     @Basic(optional = false)
     @Column(name = "idCart")

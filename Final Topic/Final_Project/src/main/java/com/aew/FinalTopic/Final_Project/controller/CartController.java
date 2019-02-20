@@ -1,8 +1,8 @@
-package com.aew.FinalTopic.Final_Proyect.controller;
+package com.aew.FinalTopic.Final_Project.controller;
 
-import com.aew.FinalTopic.Final_Proyect.model.Cart;
-import com.aew.FinalTopic.Final_Proyect.services.CartService;
-import com.aew.FinalTopic.Final_Proyect.services.UserService;
+import com.aew.FinalTopic.Final_Project.model.Cart;
+import com.aew.FinalTopic.Final_Project.services.CartService;
+import com.aew.FinalTopic.Final_Project.services.UserService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

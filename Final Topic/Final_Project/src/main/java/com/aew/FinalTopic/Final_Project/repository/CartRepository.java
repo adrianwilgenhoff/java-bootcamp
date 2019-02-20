@@ -1,6 +1,6 @@
-package com.aew.FinalTopic.Final_Proyect.repository;
+package com.aew.FinalTopic.Final_Project.repository;
 
-import com.aew.FinalTopic.Final_Proyect.model.Cart;
+import com.aew.FinalTopic.Final_Project.model.Cart;
 import org.springframework.data.repository.CrudRepository;
 
 /**

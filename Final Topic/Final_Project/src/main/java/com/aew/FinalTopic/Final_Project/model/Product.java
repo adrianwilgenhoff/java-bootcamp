@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.aew.FinalTopic.Final_Proyect.model;
+package com.aew.FinalTopic.Final_Project.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -30,7 +30,7 @@ import javax.validation.constraints.Size;
 @Table(name = "product")
 public class Product implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 479846546466546L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -152,6 +152,11 @@ public class Product implements Serializable {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" + "name=" + name + ", category=" + category + ", price=" + price + '}';
     }
 
     

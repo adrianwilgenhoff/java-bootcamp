@@ -1,8 +1,8 @@
-package com.aew.FinalTopic.Final_Proyect.serviceImpl;
+package com.aew.FinalTopic.Final_Project.serviceImpl;
 
-import com.aew.FinalTopic.Final_Proyect.model.Cart;
-import com.aew.FinalTopic.Final_Proyect.repository.CartRepository;
-import com.aew.FinalTopic.Final_Proyect.services.CartService;
+import com.aew.FinalTopic.Final_Project.model.Cart;
+import com.aew.FinalTopic.Final_Project.repository.CartRepository;
+import com.aew.FinalTopic.Final_Project.services.CartService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.aew.FinalTopic.Final_Proyect.services;
+package com.aew.FinalTopic.Final_Project.services;
 
-import com.aew.FinalTopic.Final_Proyect.model.Cart;
-import com.aew.FinalTopic.Final_Proyect.model.ProductCart;
-import com.aew.FinalTopic.Final_Proyect.model.ProductCartPK;
+import com.aew.FinalTopic.Final_Project.model.Cart;
+import com.aew.FinalTopic.Final_Project.model.ProductCart;
+import com.aew.FinalTopic.Final_Project.model.ProductCartPK;
 import java.util.List;
 
 /**

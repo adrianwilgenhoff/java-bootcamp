@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.aew.FinalTopic.Final_Proyect.model;
+package com.aew.FinalTopic.Final_Project.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
@@ -24,7 +24,7 @@ import javax.persistence.Table;
 @Table(name = "ProductCart")
 public class ProductCart implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 89765543424454L;
 
     @EmbeddedId
     @JsonIgnore
@@ -38,7 +38,6 @@ public class ProductCart implements Serializable {
     @ManyToOne()
     private Product idProduct;
 
-    
     @JoinColumn(name = "idCart", referencedColumnName = "idCart", /*nullable = false,*/ insertable = false, updatable = false)
     @ManyToOne()
     @JsonIgnore
@@ -113,6 +112,11 @@ public class ProductCart implements Serializable {
         }
         final ProductCart other = (ProductCart) obj;
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "ProductCart{" + "quantity=" + quantity + ", idProduct=" + idProduct + '}';
     }
 
 }

@@ -1,7 +1,7 @@
-package com.aew.FinalTopic.Final_Proyect.controller;
+package com.aew.FinalTopic.Final_Project.controller;
 
-import com.aew.FinalTopic.Final_Proyect.model.Product;
-import com.aew.FinalTopic.Final_Proyect.services.ProductService;
+import com.aew.FinalTopic.Final_Project.model.Product;
+import com.aew.FinalTopic.Final_Project.services.ProductService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,15 +17,15 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Adrian
  */
 @RestController
-@RequestMapping(value = "/api")
+@RequestMapping(value = "/api/product")
 public class ProductController {
 
     @Autowired
     private ProductService productService;
 
     //------------------------- Retrieve all products ------------------------//
-    @RequestMapping(value = "/products", method = RequestMethod.GET)
-    public ResponseEntity<List<Product>> listAllUsers() {
+    @RequestMapping(value = "/all", method = RequestMethod.GET)
+    public ResponseEntity<List<Product>> listAllProducts() {
 
         List<Product> products = productService.findAllProduct();
         if (products.isEmpty()) {
@@ -35,7 +35,7 @@ public class ProductController {
     }
 
     //----------------------- Retrieve product for name ----------------------//
-    @RequestMapping(value = "/products/name/{name}", method = RequestMethod.GET)
+    @RequestMapping(value = "/name/{name}", method = RequestMethod.GET)
     public ResponseEntity<Product> getProduct(@PathVariable("name") String name) {
         Product product = productService.findByName(name);
         if (product == null) {
@@ -45,7 +45,7 @@ public class ProductController {
     }
 
     //----------------------- Retrieve product for category ----------------------//
-    @RequestMapping(value = "/products/category/{category}", method = RequestMethod.GET)
+    @RequestMapping(value = "/category/{category}", method = RequestMethod.GET)
     public ResponseEntity<List<Product>> getProductForCategory(@PathVariable("category") String category) {
         List<Product> products = productService.findByCategory(category);
         if (products == null) {
@@ -55,7 +55,7 @@ public class ProductController {
     }
 
     //----------------------- Create product -----------------------//
-    @RequestMapping(value = "/product", method = RequestMethod.POST)
+    @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ResponseEntity<String> createProduct(@RequestBody Product product) {
 
         //reseolver problema que debo ingresar un id cualquier q no exista para que 
@@ -68,7 +68,7 @@ public class ProductController {
     }
 
     //----------------------- Update product -----------------------//
-    @RequestMapping(value = "/product/{name}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/update/{name}", method = RequestMethod.PUT)
     public ResponseEntity<Product> updateProduct(@PathVariable("name") String name, @RequestBody Product product) {
 
         Product currentProduct = productService.findByName(name);
@@ -83,7 +83,7 @@ public class ProductController {
     }
 
     //----------------------- Delete product -----------------------//
-    @RequestMapping(value = "/product/{name}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/delete/{name}", method = RequestMethod.DELETE)
     public ResponseEntity<String> deleteUser(@PathVariable("name") String name) {
         Product product = productService.findByName(name);
         if (product == null) {

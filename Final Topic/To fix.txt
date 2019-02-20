@@ -6,6 +6,4 @@
 6-add spring security
 7-add javadoc
 8-rename paths
-9-Los serialVersionUID ponelos random, si todos te quedan en 1L pierden su proposito
-10-El metodo de login lo estas haciendo con GET, deberias usar un POST, fijate que en el get estas mandando el user y el pass en la URL, por lo que quedaria en texto plano logeado en todos lados y visible para todos, un peligro.
-11-
+

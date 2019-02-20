@@ -1,8 +1,8 @@
-package com.aew.FinalTopic.Final_Proyect.serviceImpl;
+package com.aew.FinalTopic.Final_Project.serviceImpl;
 
-import com.aew.FinalTopic.Final_Proyect.model.Product;
-import com.aew.FinalTopic.Final_Proyect.repository.ProductRepository;
-import com.aew.FinalTopic.Final_Proyect.services.ProductService;
+import com.aew.FinalTopic.Final_Project.model.Product;
+import com.aew.FinalTopic.Final_Project.repository.ProductRepository;
+import com.aew.FinalTopic.Final_Project.services.ProductService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

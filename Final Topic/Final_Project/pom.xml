@@ -11,7 +11,7 @@
     <groupId>com.aew.FinalTopic</groupId>
     <artifactId>Final_Proyect</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Final_Proyect</name>
+    <name>Final_Project</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.aew.FinalTopic.Final_Proyect.repository;
+package com.aew.FinalTopic.Final_Project.repository;
 
-import com.aew.FinalTopic.Final_Proyect.model.Product;
+import com.aew.FinalTopic.Final_Project.model.Product;
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 

@@ -1,6 +1,6 @@
-package com.aew.FinalTopic.Final_Proyect.services;
+package com.aew.FinalTopic.Final_Project.services;
 
-import com.aew.FinalTopic.Final_Proyect.model.Cart;
+import com.aew.FinalTopic.Final_Project.model.Cart;
 import java.util.List;
 
 /**
